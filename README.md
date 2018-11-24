@@ -1,7 +1,5 @@
 # 句集:
 
-来自句子迷(https://www.juzimi.com/album/4565715) 
-
 **我的句子收藏**
 [高逼格语录](sentence01.md)
 [励志签名](sentence02.md)
