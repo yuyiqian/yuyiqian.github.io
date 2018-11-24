@@ -29,7 +29,8 @@ function readTxt(_md) {
 			 document.getElementById('content').innerHTML = marked(_html);
 			 changepage();
 	　　} else {
-	　　　console.log(xhr.status);
+	　　　   console.log(xhr.status);
+			 window.location.href = _md ;
 	　  }
 　　};
 }
