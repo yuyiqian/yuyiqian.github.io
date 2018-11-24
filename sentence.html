@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <title>Marked in the browser</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/rewrite_a.js"></script>
+  <script src="lib/markdown.js"></script>
 </head>
 <body>
 <div id="content"></div>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script type="text/javascript">
+	function abc(){
+		alert("abc方法的单击事件执行了");
+	}
+	function def(){
+		alert("def方法的单击事件执行了");
+	}
+</script>
 
 <script language="JavaScript">
 window.onload =function() { 
