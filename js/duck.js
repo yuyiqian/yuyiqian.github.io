@@ -1,4 +1,4 @@
-function duck(){    
+var duck = function(){    
     var _saytext = decodeURI("鸭子就是鸭子,咬人的狗就是疯狗");
     var pmpt_text;
     var err_tip = new Array("别糊弄我，让你填什么就填什么","还试，没用的。做个听话的孩子，乖","有且只有一个做法，再不然就是强制关掉软件或重启机器吧！")
