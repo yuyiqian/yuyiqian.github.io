@@ -4,19 +4,11 @@
   <meta charset="utf-8"/>
   <title>Marked in the browser</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="js/rewrite_a.js"></script>
   <script src="lib/markdown.js"></script>
 </head>
 <body>
+
 <div id="content"></div>
-<script type="text/javascript">
-	function abc(){
-		alert("abc方法的单击事件执行了");
-	}
-	function def(){
-		alert("def方法的单击事件执行了");
-	}
-</script>
 
 <script language="JavaScript">
 window.onload =function() { 
@@ -30,10 +22,50 @@ function readTxt() {
 	　　if (xhr.readyState == 4&&xhr.status == 200){　　　　 
 	　　　　 var _html = xhr.responseText;
 			 document.getElementById('content').innerHTML = marked(_html);
+			 changepage();
 	　　} else {
 	　　　console.log(xhr.status);
 	　  }
 　　};
+}
+function eval_a_href_event(id) {
+	var link = _event_list[id];
+	if(link != null && link[1] != null) {
+		// 拿到href属性的值		
+		var _md = link[1];
+	　　var xhr = new XMLHttpRequest();
+	　　xhr.open('get',_md,true);
+	　　xhr.send();
+	　　xhr.onreadystatechange = function () {
+		　　if (xhr.readyState == 4&&xhr.status == 200){　　　　 
+		　　　　 var _html = xhr.responseText;
+				 document.getElementById('content').innerHTML = marked(_html);
+				 changepage();
+		　　} else {
+		　　　console.log(xhr.status);
+			  window.location.href = _md;	
+		　  }
+	　　};
+	}
+}
+
+var _event_list = {};
+function changepage(){
+	// 找到页面上所有的a标签
+	var links = $(document).find("a");
+	// 循环数组，拿到每一个a标签
+	for(var index in links) {
+		// 保存click属性的值
+		var _click = links.eq(index).attr("onclick");
+		// 保存href属性的值
+		var _href = links.eq(index).attr("href");
+
+		if(_href != null) {
+			// 给href属性重新设值
+			links.eq(index).attr("href","javascript:eval_a_href_event('a"+index+"')");
+		}
+		_event_list["a"+index] = [links.eq(index),_href,_click];
+	}
 }
 </script>
 </body>

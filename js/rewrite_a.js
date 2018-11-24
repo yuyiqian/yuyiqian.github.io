@@ -24,9 +24,9 @@ function eval_a_click_event(id) {
 	var link = _event_list[id];
 	if(link != null && link[2] != null) {
 		// 拿到单击事件的方法
-		alert(link[2]);
+		//alert(link[2]);
 		// 执行单击事件
-		eval(link[2]);
+		//eval(link[2]);
 	}
 }
  
@@ -36,16 +36,16 @@ function eval_a_href_event(id) {
 		// 拿到href属性的值
 		alert(link[1]);
 		// 将href属性值重新赋回原来的值
-		link[0].attr("href",link[1]);
+/*		link[0].attr("href",link[1]);
 		// 移除单击事件
 		link[0].removeAttr("onclick");
 		// 模拟单击事件
-		link[0][0].click();
+		//link[0][0].click();
 		// 重写href属性的值
 		link[0].attr("href","javascript:eval_a_href_event('"+id+"')");
 		// 如果有单击事件，重新加上
 		if(link[2] != null) {
 			link[0].attr("onclick",link[2]);
-		}
+		}*/
 	}
 }
