@@ -59,7 +59,7 @@
     alert("诶，你们觉得于鸭子会从良吗？");
     alert("再点一下，在那个输入框填出真心话我就立马放你出去！");
     pmpt_texte = prompt("你觉得做坏事的于鸭子过街，是不是该人人喊打？");
-    _saytext = decodeURI("是");
+    var _saytext = decodeURI("是");
     for ( i = 0; pmpt_texte != _saytexte; ++i)
     {
         if ( i == err_tipe.length)
@@ -69,28 +69,29 @@
         alert(err_tip[i]);
         pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
     }
-    
-    pmpt_texte = prompt("你觉得黑心的于鸭子会给哥们戴绿帽子对不对？");
-    _saytext = decodeURI("不对");
-    for ( i = 0; pmpt_text != _saytext; ++i)
+    var pmpt_textes;
+    pmpt_textes = prompt("你觉得黑心的于鸭子会给哥们戴绿帽子对不对？");
+    var _saytext = decodeURI("不对");
+    for ( i = 0; pmpt_textes != _saytext; ++i)
     {
         if ( i == err_tip.length)
         {
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_textes = prompt("快在下面输入框填“" + _saytext +"”");
     }
-    pmpt_texte = prompt("你觉得狗要你你还会咬回去吗？");
-    _saytext = decodeURI("不是");
-    for ( i = 0; pmpt_text != _saytext; ++i)
+    var pmpt_texted;
+    pmpt_texted = prompt("你觉得狗要你你还会咬回去吗？");
+    var _saytext = decodeURI("不是");
+    for ( i = 0; pmpt_texted != _saytext; ++i)
     {
         if ( i == err_tip.length)
         {
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texted = prompt("快在下面输入框填“" + _saytext +"”");
     }
 
     alert("真是不好意思，让你昧着良心说这话。");
