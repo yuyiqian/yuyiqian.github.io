@@ -11,8 +11,9 @@
 <div id="content"></div>
 
 <script language="JavaScript">
+var _event_list = {};	
 window.onload =function() { 
-	readTxt();
+	readTxt();	
 }
 function readTxt() {
 　　var xhr = new XMLHttpRequest();
@@ -23,6 +24,7 @@ function readTxt() {
 	　　　　 var _html = xhr.responseText;
 			 document.getElementById('content').innerHTML = marked(_html);
 			 changepage();
+			 var _event_list = {};
 	　　} else {
 	　　　console.log(xhr.status);
 	　  }
@@ -41,6 +43,7 @@ function eval_a_href_event(id) {
 		　　　　 var _html = xhr.responseText;
 				 document.getElementById('content').innerHTML = marked(_html);
 				 changepage();
+				 var _event_list = {};
 		　　} else {
 		　　　console.log(xhr.status);
 			  window.location.href = _md;	
@@ -49,8 +52,7 @@ function eval_a_href_event(id) {
 	}
 }
 
-function changepage(){
-	var _event_list = {};
+function changepage(){	
 	// 找到页面上所有的a标签
 	var links = $(document).find("a");
 	// 循环数组，拿到每一个a标签
