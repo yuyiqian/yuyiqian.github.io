@@ -53,21 +53,46 @@ var duck = function(){
     alert("什么？放你出去？门都没有。");
     alert("要不猜个谜语？");
     alert("还是算了，要是猜不出来，急起来跳墙了就有辱审计学子的风范了。");
-    var _saytexte = decodeURI("鸭子要是成了人，就是丑小鸭");
+    var _saytexte = decodeURI("鸭子不会飞，但狗急了会跳墙");
     var pmpt_texte;
-    var err_tipe = new Array("这哪里行，要填，“鸭子要是变成了人，就是丑小鸭”","哗众取丑那种，哈哈哈","叫你填什么，你就填什么，听话照做……","好吧，我承认有点丑。感觉让你们睁眼说瞎话，我都很难受。")
+    var err_tipe = new Array("这哪里行，要填，“丑小鸭是白天鹅变的，但是天鹅被狗吃了”","哗众取丑的天鹅，原来是鸭子，哈哈哈","鸭子坏了是不好修，还是修不好","叫你填什么，你就填什么，听话照做……","好吧，我承认心理扭曲丑恶的人真的很丑。感觉让你们睁眼说瞎话，我都很难受。")
     alert("诶，你们觉得于鸭子会从良吗？");
     alert("再点一下，在那个输入框填出真心话我就立马放你出去！");
-    pmpt_texte = prompt("你觉得于鸭子还会诈骗吗？");
+    pmpt_texte = prompt("你觉得做坏事的于鸭子过街，是不是该人人喊打？");
+    _saytext = decodeURI("是");
     for ( i = 0; pmpt_texte != _saytexte; ++i)
     {
         if ( i == err_tipe.length)
         {
-        i = 0;
+            i = 0;
+        }
+        alert(err_tip[i]);
+        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
     }
-    alert(err_tipe[i]);
-    pmpt_texte = prompt("你觉得于鸭子还会给哥们戴绿帽子吗？");
+    
+    pmpt_texte = prompt("你觉得黑心的于鸭子会给哥们戴绿帽子对不对？");
+    _saytext = decodeURI("不对");
+    for ( i = 0; pmpt_text != _saytext; ++i)
+    {
+        if ( i == err_tip.length)
+        {
+            i = 0;
+        }
+        alert(err_tip[i]);
+        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
+    }
     pmpt_texte = prompt("你觉得狗要你你还会咬回去吗？");
+    _saytext = decodeURI("不是");
+    for ( i = 0; pmpt_text != _saytext; ++i)
+    {
+        if ( i == err_tip.length)
+        {
+            i = 0;
+        }
+        alert(err_tip[i]);
+        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
+    }
+
     alert("真是不好意思，让你昧着良心说这话。");
     alert("好像没什么好玩的了。");
     alert("要不给你讲个故事吧。");
@@ -112,7 +137,7 @@ var duck = function(){
     alert("对了，冒昧问一句，你们都是被“十大奇葩”这个标题吸引进来的吗？");
     alert("好吧，我确实写了一些对别人的看法。");
     alert("在下面方框中输入名字，就能看到ta的奇葩事迹汇总。不过不能保证都有哦。");
-    pmpt_text = prompt("快在下面输入框填形如格式“孩子事跟隔壁老王无关”");
+    pmpt_text = prompt("快在下面输入框填形如格式“老王带你装逼，你就牛逼”");
     alert("额，搞错了。");
     alert("骗你的，我什么都没写。");
     alert("算了，说点开心的吧。");
