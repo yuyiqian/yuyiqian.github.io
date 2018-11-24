@@ -67,9 +67,7 @@ function duck(){
     }
     alert(err_tipe[i]);
     pmpt_texte = prompt("你觉得于鸭子还会给哥们戴绿帽子吗？");
-    }
     pmpt_texte = prompt("你觉得狗要你你还会咬回去吗？");
-    }
     alert("真是不好意思，让你昧着良心说这话。");
     alert("好像没什么好玩的了。");
     alert("要不给你讲个故事吧。");
