@@ -13,42 +13,37 @@
 <script language="JavaScript">
 var _event_list = {};	
 window.onload =function() { 
-	readTxt();	
+	readTxt('README.md');	
 }
-function readTxt() {
+function readTxt(_md) {
 　　var xhr = new XMLHttpRequest();
-　　xhr.open('get','README.md',true);
+　　xhr.open('get',_md,true);
 　　xhr.send();
 　　xhr.onreadystatechange = function () {
 	　　if (xhr.readyState == 4&&xhr.status == 200){　　　　 
 	　　　　 var _html = xhr.responseText;
 			 document.getElementById('content').innerHTML = marked(_html);
 			 changepage();
-			 var _event_list = {};
 	　　} else {
 	　　　console.log(xhr.status);
 	　  }
 　　};
+}
+
+function eval_a_click_event(id) {
+	var link = _event_list[id];
+	if(link != null && link[2] != null) {
+		// 拿到单击事件的方法
+		var _md = link[2];
+	　　readTxt(_md);
+	}
 }
 function eval_a_href_event(id) {
 	var link = _event_list[id];
 	if(link != null && link[1] != null) {
 		// 拿到href属性的值		
 		var _md = link[1];
-	　　var xhr = new XMLHttpRequest();
-	　　xhr.open('get',_md,true);
-	　　xhr.send();
-	　　xhr.onreadystatechange = function () {
-		　　if (xhr.readyState == 4&&xhr.status == 200){　　　　 
-		　　　　 var _html = xhr.responseText;
-				 document.getElementById('content').innerHTML = marked(_html);
-				 changepage();
-				 var _event_list = {};
-		　　} else {
-		　　　console.log(xhr.status);
-			  window.location.href = _md;	
-		　  }
-	　　};
+	　　readTxt(_md);
 	}
 }
 
@@ -61,7 +56,10 @@ function changepage(){
 		var _click = links.eq(index).attr("onclick");
 		// 保存href属性的值
 		var _href = links.eq(index).attr("href");
-
+		if( _click != null) {
+			// 给onclick属性重新设值
+			links.eq(index).attr("onclick","eval_a_click_event('a"+index+"')");
+		}
 		if(_href != null) {
 			// 给href属性重新设值
 			links.eq(index).attr("href","javascript:eval_a_href_event('a"+index+"')");
