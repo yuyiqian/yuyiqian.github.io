@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+</head>
+<body>
+<div id="content"></div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script language="JavaScript">
+window.onload =function() { 
+	readTxt();
+}
+function readTxt() {
+　　var xhr = new XMLHttpRequest();
+　　xhr.open('get','README.md',true);
+　　xhr.send();
+　　xhr.onreadystatechange = function () {
+	　　if (xhr.readyState == 4&&xhr.status == 200){　　　　 
+	　　　　 var _html = xhr.responseText;
+			 document.getElementById('content').innerHTML = marked(_html);
+	　　} else {
+	　　　console.log(xhr.status);
+	　  }
+　　};
+}
+</script>
+</body>
+</html>
