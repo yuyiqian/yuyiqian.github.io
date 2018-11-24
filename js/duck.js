@@ -67,7 +67,7 @@
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
     }
     
     pmpt_texte = prompt("你觉得黑心的于鸭子会给哥们戴绿帽子对不对？");
@@ -79,7 +79,7 @@
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
     }
     pmpt_texte = prompt("你觉得狗要你你还会咬回去吗？");
     _saytext = decodeURI("不是");
@@ -90,7 +90,7 @@
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_text = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
     }
 
     alert("真是不好意思，让你昧着良心说这话。");
