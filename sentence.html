@@ -7,13 +7,12 @@
   <meta name="keywords" content="高逼格语录,励志签名,恶搞幽默,早安心语,爱情经典,幽默搞笑,经典语录,人生感悟,诙谐智慧, 拟人句,夸人句,比喻句,排比句,高逼格语录的句子,励志签名的句子,恶搞幽默的句子,早安心语的句子,爱情经典的句子,幽默搞笑的句子,经典语录的句子,人生感悟的句子,诙谐智慧的句子, 拟人的句子,夸人的句子,比喻的句子,排比的句子">
   <meta name="description" content="高逼格语录,励志签名,恶搞幽默,早安心语,爱情经典,幽默搞笑,经典语录,人生感悟,诙谐智慧, 拟人句,夸人句,比喻句,排比句,高逼格语录的句子,励志签名的句子,恶搞幽默的句子,早安心语的句子,爱情经典的句子,幽默搞笑的句子,经典语录的句子,人生感悟的句子,诙谐智慧的句子, 拟人的句子,夸人的句子,比喻的句子,排比的句子">
 </head>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="lib/markdown.js"></script>
-</head>
 <body>
 
 <div id="content"></div>
 
+<script src="lib/jquery-3.2.1.min.js"></script>
+<script src="lib/markdown.js"></script>
 <script language="JavaScript">
 var _event_list = {};	
 window.onload =function() { 
@@ -33,7 +32,6 @@ function readTxt(_md) {
 	　  }
 　　};
 }
-
 function eval_a_click_event(id) {
 	var link = _event_list[id];
 	if(link != null && link[2] != null) {
@@ -50,7 +48,6 @@ function eval_a_href_event(id) {
 	　　readTxt(_md);
 	}
 }
-
 function changepage(){	
 	// 找到页面上所有的a标签
 	var links = $(document).find("a");
