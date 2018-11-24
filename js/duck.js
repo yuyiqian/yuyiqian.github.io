@@ -57,7 +57,7 @@
     alert("还是算了，要是猜不出来，急起来跳墙了就有辱审计学子的风范了。");    
        
     var pmpt_texte;
-    var _saytext = decodeURI("是");
+    var _saytexte = decodeURI("是");
     var err_tipe = new Array("这哪里行，要填，“丑小鸭是白天鹅变的，但是天鹅被狗吃了”","哗众取丑的天鹅，原来是鸭子，哈哈哈","鸭子坏了是不好修，还是修不好","叫你填什么，你就填什么，听话照做……","好吧，我承认心理扭曲丑恶的人真的很丑。感觉让你们睁眼说瞎话，我都很难受。")
     alert("诶，你们觉得于鸭子会从良吗？");
     alert("再点一下，在那个输入框填出真心话我就立马放你出去！");
@@ -69,33 +69,33 @@
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_texte = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texte = prompt("快在下面输入框填“" + _saytexte +"”");
     }
 
     var pmpt_textes;
-    var _saytext = decodeURI("不对");
+    var _saytextes = decodeURI("不对");
     pmpt_textes = prompt("你觉得黑心的于鸭子会给哥们戴绿帽子对不对？");
-    for ( i = 0; pmpt_textes != _saytext; ++i)
+    for ( i = 0; pmpt_textes != _saytextes; ++i)
     {
         if ( i == err_tip.length)
         {
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_textes = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_textes = prompt("快在下面输入框填“" + _saytextes +"”");
     }
 
     var pmpt_texted;
-    var _saytext = decodeURI("不是");
+    var _saytexted = decodeURI("不是");
     pmpt_texted = prompt("你觉得狗要你你还会咬回去吗？");
-    for ( i = 0; pmpt_texted != _saytext; ++i)
+    for ( i = 0; pmpt_texted != _saytexted; ++i)
     {
         if ( i == err_tip.length)
         {
             i = 0;
         }
         alert(err_tip[i]);
-        pmpt_texted = prompt("快在下面输入框填“" + _saytext +"”");
+        pmpt_texted = prompt("快在下面输入框填“" + _saytexted +"”");
     }
 
     alert("真是不好意思，让你昧着良心说这话。");
